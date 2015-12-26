@@ -113,9 +113,9 @@
     }
   ],
   "variables": {
-    "iso_url": "http://iso.esd.microsoft.com/W10IP/BF15E0F8F8F6B6BFCD0F62892BFBA60756371D21/Windows10_InsiderPreview_x64_EN-US_10565.iso",
+    "iso_url": "http://care.dlservice.microsoft.com/dl/download/B/B/3/BB3611B6-9781-437F-A293-AB43B85C2190/10586.0.151029-1700.TH2_RELEASE_CLIENTENTERPRISEEVAL_OEMRET_X64FRE_EN-US.ISO",
     "iso_checksum_type": "sha1",
-    "iso_checksum": "EA37A740FD0744CAE856D1B12FB4167F6EE88B54",
+    "iso_checksum": "93845bbcc9677000df76cb2a5267c8eb52995bae",
     "autounattend": "./answer_files/10/Autounattend.xml",
     "product_key": "<tab><tab>"
   }
