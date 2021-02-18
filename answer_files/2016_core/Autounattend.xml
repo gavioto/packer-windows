@@ -50,8 +50,8 @@
                 <OSImage>
                     <InstallFrom>
                         <MetaData wcm:action="add">
-                            <Key>/IMAGE/NAME </Key>
-                            <Value>Windows Server 2012 R2 SERVERDATACENTERCORE</Value>
+                            <Key>/IMAGE/NAME</Key>
+                            <Value>Windows Server 2016 SERVERSTANDARDCORE</Value>
                         </MetaData>
                     </InstallFrom>
                     <InstallTo>
@@ -175,6 +175,12 @@
                     <CommandLine>cmd.exe /c a:\microsoft-updates.bat</CommandLine>
                     <Order>98</Order>
                     <Description>Enable Microsoft Updates</Description>
+                </SynchronousCommand>
+                <SynchronousCommand wcm:action="add">
+                    <CommandLine>cmd.exe /c C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe -File a:\disable-screensaver.ps1</CommandLine>
+                    <Description>Disable Screensaver</Description>
+                    <Order>99</Order>
+                    <RequiresUserInput>true</RequiresUserInput>
                 </SynchronousCommand>
                 <SynchronousCommand wcm:action="add">
                     <CommandLine>cmd.exe /c C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe -File a:\win-updates.ps1</CommandLine>

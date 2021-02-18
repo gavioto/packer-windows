@@ -1,6 +1,7 @@
 .DS_Store
 /iso/*
 !/iso/README.md
+/output-hyperv-iso/
 /output-vmware/
 /output-vmware-iso/
 /output-vmware-vmx/
@@ -11,6 +12,10 @@
 /packer_cache/
 *.log
 *~
+*.swp
 /output/
 *.webm
-tmp/
+tmp
+/issues/
+*.iso
+path-to.vmx

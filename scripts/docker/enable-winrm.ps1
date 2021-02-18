@@ -7,17 +7,9 @@ winrm set winrm/config/service '@{AllowUnencrypted="true"}'
 winrm set winrm/config/service/auth '@{Basic="true"}'
 winrm set winrm/config/client/auth '@{Basic="true"}'
 winrm set winrm/config/listener?Address=*+Transport=HTTP '@{Port="5985"}'
-# Set-Service winrm -startuptype "auto"
-# Restart-Service winrm
 
-Write-Host "Install Containers"
-Install-WindowsFeature -Name Containers
-if (Test-Path a:\oracle-cert.cer) {
-  Write-Host "Skipping installation of Hyper-V in VirtualBox basebox"
-} else {
-  Write-Host "Install Hyper-V"
-  Install-WindowsFeature -Name Hyper-V
-  Install-WindowsFeature Hyper-V-Tools
+if (Test-Path A:\install-containers-feature.ps1) {
+  . A:\install-containers-feature.ps1
 }
 
 Stop-Service winrm
